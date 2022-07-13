@@ -10,7 +10,8 @@ body,
 
 .flex-wrapper {
   display: flex;
-  /* gap: 10px; */
+  gap: 10px;
+  /* flex-direction: row; */
   /* flex-direction: column; */
   /* flex-wrap: wrap; */
   /* justify-content: center; */
@@ -26,8 +27,8 @@ body,
   background-color: #2E86C1;
   border: 1px solid #1F618D;
   font-size: 30px;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   color: #fff
 }

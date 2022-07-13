@@ -1,11 +1,14 @@
-#paragraph-id {
+/* 100 */
+#paragraph-id { 
   color: green;
 }
 
+/* 10 */
 .class-a {
   color: red;
 }
 
+/* 1 */
 p {
   color: blue;
 }
