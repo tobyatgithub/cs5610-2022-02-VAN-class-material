@@ -8,6 +8,8 @@ function outer() {
   return inner;
 }
 
+// console.log(outerVar)
+
 const innerFn = outer();
 innerFn();
 
@@ -23,6 +25,8 @@ const sayHey = createGreeting("hey");
 console.log(sayHello("Cris"));
 console.log(sayHello("Mirian"));
 console.log(sayHey("Clara"));
+console.log(sayHello("Mirian"));
+
 
 function createGame(gameName) {
   let score = 0;

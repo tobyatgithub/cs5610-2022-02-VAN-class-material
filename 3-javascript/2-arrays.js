@@ -1,6 +1,6 @@
 // creates an array
 const faces = ["😃", "😗", "🤡", "🤑", "😵", "🤤", "🙃", "🥳"];
-
+// 0     1     2    3    4     5     6    7
 // array length
 console.log("1 ========== ========== =========");
 console.log(faces.length);
@@ -22,7 +22,7 @@ console.log("4 ========== ========== =========");
 faces.push("😬");
 console.log(faces);
 
-// //Add an item to the beginning of an Array
+// // //Add an item to the beginning of an Array
 console.log("5 ========== ========== =========");
 faces.unshift("🥶");
 console.log(faces);
@@ -50,21 +50,26 @@ console.log(faces);
 
 // //copy array
 console.log("10 ========== ========== =========");
-const copyFaces = [...faces];
+const copyFaces = [...faces, 1, 2, 3];
 console.log(copyFaces);
 
 // // MAP
 console.log("11 ========== ========== =========");
 const facesWithHand = faces.map((f) => {
+  // return f + "-👋";
   return `${f}-👋`;
 });
 console.log(facesWithHand);
 
 const numbers = [1, 2, 3, 4, 5, 6];
 const doubled = numbers.map((n) => n * 2);
+// const doubled = numbers.map((n) => {
+//   return n * 2;
+// });
+
 console.log(doubled);
 
-// // JOIN
+// // // JOIN
 console.log("12 ========== ========== =========");
 console.log(faces.join("-"));
 
@@ -127,6 +132,5 @@ const studentsFromVancouverAnd30PlusOnlyName = students
   });
 console.log(studentsFromVancouverAnd30PlusOnlyName);
 
-
-// // More info on this
-// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// // // More info on this
+// // // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

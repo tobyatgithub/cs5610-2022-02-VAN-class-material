@@ -1,4 +1,5 @@
 // creating an object
+
 const person = {
   id: 123,
   firstName: "cristian",
@@ -9,7 +10,7 @@ const person = {
   kids: [
     {
       name: "clara",
-      age: 4,
+      age: 5,
     },
     {
       name: "Francisco",
@@ -30,23 +31,25 @@ console.log(person.kids[0].name);
 console.log(person.kids[1].name);
 console.log(person.getFullName());
 
-// updating values
+// // updating values
 console.log("2 ========== ========== =========");
 person.age = 40;
+person.address = 'my home address ......';
 console.log(person.age);
+console.log(person.address);
 
-// // creating new fields after object creation
-// console.log("3 ========== ========== =========");
+// // // creating new fields after object creation
+console.log("3 ========== ========== =========");
 person.location = "Vancouver";
 console.log(person.location);
 
-// // creates an object based on the fields from another object
-// console.log("4 ========== ========== =========");
+// // // creates an object based on the fields from another object
+console.log("4 ========== ========== =========");
 const person2 = { ...person, firstName: "Rui", lastName: "Wang" };
-console.log(person.firstName);
-console.log(person.kids);
-console.log(person.email);
+console.log(person2.firstName);
+console.log(person2.kids);
+console.log(person2.email);
 
 
-// // More info on this
-// // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+// // // More info on this
+// // // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics

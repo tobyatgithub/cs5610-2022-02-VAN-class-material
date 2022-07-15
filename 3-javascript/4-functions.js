@@ -16,7 +16,7 @@ function calculateBill(billAmount, taxRate = 0.13, tipRate = 0.15) {
   return total;
 }
 
-const myBill = calculateBill();
+const myBill = calculateBill(77);
 
 const myBill1 = calculateBill(500, 0.3);
 
@@ -39,7 +39,7 @@ const doctorizeArrow = (firstName) => {
   return `Dr. ${firstName}`;
 };
 
-// // arrow function one line
+// // // arrow function one line
 const doctorizeArrowOneLine = (firstName) => `Dr. ${firstName}`;
 
 // // IIFE - Immediately Invoked Function Expression
@@ -69,9 +69,9 @@ button.addEventListener("click", handleClick);
 
 // // Timer Callback
 setTimeout(() => {
-  console.log("Hello, 1 second passed");
+  console.log("Hello, 5 second passed");
 }, 5000);
 
 
-// // More info on this
-// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+// // // More info on this
+// // // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions

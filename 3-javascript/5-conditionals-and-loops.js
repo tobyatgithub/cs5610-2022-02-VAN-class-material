@@ -11,7 +11,7 @@ if (age > 70) {
   console.log("Nothing was true");
 }
 
-// ============================
+// // ============================
 const firstName = "Cris";
 const lastName = "Pen";
 
@@ -19,7 +19,7 @@ if (firstName === "William" || (firstName === "Cris" && lastName == "Pen")) {
   console.log("Coool Name!");
 }
 
-// // ============================
+// // // ============================
 const values = [
   [],
   {},
@@ -46,7 +46,7 @@ values.forEach((value) => {
 });
 console.groupEnd();
 
-// // ============================
+// // // ============================
 function showAdminBar() {
   console.log("Showing admin bar");
 }
@@ -55,9 +55,9 @@ const isAdmin = true;
 isAdmin ? showAdminBar() : null;
 isAdmin && showAdminBar();
 
-if (isAdmin) {
-  showAdminBar();
-}
+// if (isAdmin) {
+//   showAdminBar();
+// }
 
 // // Loops
 console.log("======== Loops ========");
@@ -93,8 +93,8 @@ while (cool === true) {
   }
 }
 
-// // More info on this
-// // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
-// // https://developer.mozilla.org/en-US/docs/Glossary/Truthy
-// // https://developer.mozilla.org/en-US/docs/Glossary/Falsy
-// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+// // // More info on this
+// // // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
+// // // https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+// // // https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+// // // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
