@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import { useUser } from "../UserContext";
-// import { useNavigate } from "react-router-dom";
+import { useUser } from "../UserContext";
+import { useNavigate } from "react-router-dom";
 import { GITHUB_API_URL } from "../constants";
 import "../style/repositories.css";
 
@@ -19,7 +19,26 @@ const getLanguageCssClass = (language) => {
 };
 
 export default function Repositories() {
+  const { user } = useUser();
   const [repositories, setRepositories] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // make an api request to Github API to get list of repos
+    async function getRepositories() {
+      const res = await fetch(
+        `${GITHUB_API_URL}/users/${user.login}/repos?sort=created_at`
+      );
+      const data = await res.json();
+      if (data && data.length) {
+        setRepositories(data);
+      }
+    }
+
+    if (user?.login) {
+      getRepositories();
+    }
+  }, [user]);
 
   return (
     <div>
@@ -29,7 +48,7 @@ export default function Repositories() {
           <li
             className="repository-row-li"
             key={repository.id}
-            onClick={() => {}}
+            onClick={() => navigate(`/app/repositories/${repository.name}`)}
           >
             <div className="repository-row">
               <div>{repository.name}</div>

@@ -1,11 +1,17 @@
 import React from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
-// import { useUser } from "../UserContext";
+import { useUser } from "../UserContext";
 
 import "../style/appLayout.css";
 
 export default function AppLayout() {
-  const exitApp = () => {};
+  const { user, setUser } = useUser();
+  const navigate = useNavigate();
+
+  const exitApp = () => {
+    setUser(null);
+    navigate("/");
+  };
   return (
     <div className="app">
       <div className="title">
@@ -16,6 +22,7 @@ export default function AppLayout() {
           <ul className="menu-list">
             <li>
               <Link to="/app">Profile</Link>
+              {/* <a href="/app">Profile</a> */}
             </li>
             <li>
               <Link to="/app/repositories">Repositories</Link>
@@ -27,7 +34,7 @@ export default function AppLayout() {
             </li>
           </ul>
         </nav>
-        <div>Welcome 👋 Cristian</div>
+        <div>Welcome 👋 {user?.name}</div>
       </div>
       <div className="content">
         <Outlet />

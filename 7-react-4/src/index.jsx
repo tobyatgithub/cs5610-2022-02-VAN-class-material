@@ -11,4 +11,26 @@ import { UserProvider } from "./UserContext";
 import "./style/normalize.css";
 import "./style/index.css";
 
-ReactDOM.render(<Home />, document.getElementById("root"));
+ReactDOM.render(
+  <UserProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="app" element={<AppLayout />}>
+          <Route path="repositories" element={<Repositories />} />
+          <Route index element={<Profile />} />
+          <Route
+            path="repositories/:repositoryId"
+            element={<RepositoryDetail />}
+          />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+
+        {/* <Route path="/" element={<Home />} />
+      <Route path="/app" element={<Profile />} />
+      <Route path="/app/repositories" element={<Repositories />} /> */}
+      </Routes>
+    </BrowserRouter>
+  </UserProvider>,
+  document.getElementById("root")
+);
