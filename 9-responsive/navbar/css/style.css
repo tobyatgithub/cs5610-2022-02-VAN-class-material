@@ -100,10 +100,52 @@ nav a:hover {
 
 /* Tablet */
 @media (min-width: 550px) {
+  nav {
+    display:flex;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 
+  nav li {
+    flex-basis: 20%;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  nav a{
+    background-color: transparent;
+    color: black;
+  }
 }
 
 /* Desktop */
 @media (min-width: 800px) {
+  nav {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
+  nav ul {
+    flex-wrap: nowrap;
+  }
+
+  nav li {
+    flex-basis: 10%;
+    margin-bottom: 0.5rem;
+  }
+
+  nav li:first-child {
+    flex-basis: 20%;
+    text-align: center;
+  }
+
+  nav li:nth-child(3) {
+    /* flex-basis: 10%; */
+    text-align: left;
+  }
 }

@@ -95,5 +95,14 @@ figcaption a:hover {
 /* START */
 
 @media (min-width: 550px) {
-
+  #popart ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    gap: 10px;
+  }
+  .colspan2 {
+    /* grid-column: 1/2; */
+    grid-column: span 2;
+  }
 }

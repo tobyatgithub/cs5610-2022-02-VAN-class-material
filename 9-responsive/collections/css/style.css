@@ -132,10 +132,45 @@ section ul {
 
 /* Tablet */
 @media (min-width: 550px) {
+  #collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  li{
+    /* 
+    max-width: 45%; */
+    margin: 10px;
+    flex-basis: 45%;
+  }
+
+  figure img{
+    object-position: 0;
+  }
 
 }
 
 /* Desktop */
 @media (min-width: 800px) {
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
 
+  li{
+    margin: 10px;
+    max-width: 30%;
+  }
 }
